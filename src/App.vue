@@ -44,9 +44,25 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50vmin, 1fr));
+    grid-auto-rows: minmax(0px, 1fr);
+    grid-auto-flow: row;
+    gap: 0.5em;
+
+    background-color: var(--color-background);
+}
+
 .remote {
     width: 100%;
-    max-height: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
